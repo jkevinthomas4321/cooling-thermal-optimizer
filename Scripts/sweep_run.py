@@ -1,7 +1,7 @@
 import matlab.engine
 import numpy as np
 import pandas as pd
-
+print("STARTED")
 eng = matlab.engine.start_matlab()
 eng.cd(r'S:\Projects\datacenter_cooling\models', nargout=0)
 
@@ -16,9 +16,12 @@ heat_block_path = f'{model_name}/heat_flow'
 #speed_values = [50, 75, 100, 125, 150, 175, 200, 250, 300, 350]  # rad/s - we found 50 is the optimal angular velocity in this set of values
 #optimizing further with lower speed values
 #speed_values_opt = list(range(30,37,1)) - found that pump produces positive pressure above 33rad/s
+#Choosing 40 rad/s as base considering factor for safety
+speed_values = [40, 60, 80, 100, 125, 150, 175, 200]  # rad/s
 
-speed_values = [40, 60, 80, 100, 125, 150, 175, 200, 250, 300, 350]  # rad/s
-heat_values = [40, 65, 90, 115, 150]  # Watts
+#heat_values = [40, 65, 90, 115, 150, 200]  # Watts
+
+heat_values = [40, 65, 90, 115, 150, 200, 250, 300, 350, 400, 450, 500]  # Watts
 
 results = []
 total_runs = len(speed_values) * len(heat_values)
@@ -64,5 +67,5 @@ df = pd.DataFrame(results)
 print("\n--- Full Sweep Results ---")
 print(df)
 
-df.to_csv(r'S:\Projects\datacenter_cooling\results\full_sweep_test.csv', index=False)
+df.to_csv(r'S:\Projects\datacenter_cooling\results\final_data.csv', index=False)
 print("\nSaved to results/full_sweep_test.csv")

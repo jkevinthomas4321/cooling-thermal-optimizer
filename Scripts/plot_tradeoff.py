@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv(r'S:\Projects\datacenter_cooling\results\full_sweep_test.csv')
+df = pd.read_csv(r'S:\Projects\datacenter_cooling\results\final_data.csv')
 
 THERMAL_LIMIT_K = 368.15  # 95°C
 

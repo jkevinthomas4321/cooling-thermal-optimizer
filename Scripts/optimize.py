@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv(r'S:\Projects\datacenter_cooling\results\full_sweep_final.csv')
+df = pd.read_csv(r'S:\Projects\datacenter_cooling\results\final_data.csv')
 
 RHO_WATER = 1000
 THERMAL_LIMIT_K = 368.15

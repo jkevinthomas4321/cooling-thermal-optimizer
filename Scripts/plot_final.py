@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv(r'S:\Projects\datacenter_cooling\results\full_sweep_final.csv')
+df = pd.read_csv(r'S:\Projects\datacenter_cooling\results\final_data.csv')
 opt_df = pd.read_csv(r'S:\Projects\datacenter_cooling\results\optimization_results.csv')
 
 RHO_WATER = 1000

@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv(r'S:\Projects\datacenter_cooling\results\full_sweep_opt.csv')
+df = pd.read_csv(r'S:\Projects\datacenter_cooling\results\final_data.csv')
 
 RHO_WATER = 1000  # kg/m^3
 
@@ -41,5 +41,5 @@ plt.show()
 print("\nSaved to results/pump_power_plot.png")
 
 # Save updated CSV with power column included
-df.to_csv(r'S:\Projects\datacenter_cooling\results\full_sweep_with_power.csv', index=False)
+df.to_csv(r'S:\Projects\datacenter_cooling\results\final_data_with_power.csv', index=False)
 print("Saved updated CSV with power calculations.")
