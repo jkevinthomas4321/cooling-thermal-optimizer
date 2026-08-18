@@ -8,12 +8,10 @@
 A validated Simscape thermal-fluid model of a liquid-cooled server, driven end-to-end by Python (`matlab.engine`) to automatically find the **minimum pump power that keeps a CPU thermally safe** — across a range of heat loads.
 
 <p align="center">
-  <img src="results/final_tradeoff_plot.png" width="700">
+  <img src="results/final_plot.png" width="700">
 </p>
 
 ---
-
-## TL;DR
 
 - Built a coupled fluid + thermal Simscape model of a pump → cold plate → CPU loop
 - Validated every stage against hand calculations (energy balance, transient response, pump laws)
